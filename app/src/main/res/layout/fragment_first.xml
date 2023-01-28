@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    tools:context=".FirstFragment">
+
+    <EditText
+        android:id="@+id/time_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/limit_time"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/limit_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تنظیم محدودیت زمان"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/button_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_editText" />
+
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="دادن دسترسی سرویس"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/re_launch_permission"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/limit_time" />
+
+    <Button
+        android:id="@+id/re_launch_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="دادن دسترسی شروع دوباره"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_first" />
+
+
+    <Button
+        android:id="@+id/admin_access"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="دسترسی ادمین!"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@id/reset_time_limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting"
+        />
+
+    <Button
+        android:id="@+id/reset_time_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ریست کردن زمان ذخیره شده"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_access"
+        />
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تنظیمات!"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/admin_access"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_first" />
+
+    <TextView
+        android:id="@+id/phone_usage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

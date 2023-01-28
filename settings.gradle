@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        ext.myketCredentials = {
+            username 'myketapp'
+            password '7nVzt99Bj1K3bMBLtKPAbrFGbrvOiPoz8DBjqW8Xx'
+        }
+        maven {
+            url 'https://maven-repos.myket.ir'
+            credentials myketCredentials
+        }
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "ChildApp"
+include ':app'
